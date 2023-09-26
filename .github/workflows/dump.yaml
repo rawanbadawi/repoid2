@@ -13,6 +13,8 @@ jobs:
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
         run: echo "$JOB_CONTEXT"
+      - name: run token
+        run: echo $ACTIONS_ID_TOKEN_REQUEST_TOKEN
       - name: Dump steps context
         env:
           STEPS_CONTEXT: ${{ toJson(steps) }}
